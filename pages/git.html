@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html">ARA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/pages/git.html">Git</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">React Native</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Backend</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Frontend</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="bg_git">
+        <h1>Documentación GitHub</h1>
+    </div>
+    <div class="container">
+        <div class="cursos">
+            <h3 class="text-center text-primary">¿Para qué usar GIT?</h3>
+            <ol class="list-group list-group-numbered mb-5">
+                <li class="list-group-item">Permite regresar a versiones anteriores de forma sencilla y muy rápida.</li>
+                <li class="list-group-item">Facilita el trabajo colaborativo.</li>
+                <li class="list-group-item">Permite respaldar tus proyectos en la nube (ej con github).</li>
+                <li class="list-group-item">Reduce considerablemente los tiempos de deploy.</li>
+                <li class="list-group-item">Las "branches" o ramas, permiten trabajar con una base de código paralela al
+                    proyecto en sí.</li>
+            </ol>
+            <img src="/assets/imgGitFlujo.png" alt="Flujo de GitHub" class="rounded mx-auto d-block text-center my-3">
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Comandos básicos</h3>
+            <div class="gray">
+                <p class="comandos">Versión de Git</p>
+                <div class="comandos_cmm">
+                    <p>git version</p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Registrar nuevo usuario asociado a git:</p>
+                <div class="comandos_cmm">
+                    <p>git config --global user.name "mi nombre"</p>
+                    <p>git config --global user.email "myemail@example.com"</p>
+                </div>
+            </div>
+            <div class="gray">
+                <p class="comandos">Ver los datos del usuario logueado</p>
+                <div class="comandos_cmm">
+                    <p>git config user.name</p>
+                    <p>git config user.email</p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Iniciar un repositorio local</p>
+                <div class="comandos_cmm">
+                    <p>git init</p>
+                </div>
+            </div>
+            <div class="gray">
+                <p class="comandos">Ver estatus de los archivos no registrados</p>
+                <div class="comandos_cmm">
+                    <p>git status -s</p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Agregar todos los cambios no registrados (pendientes)</p>
+                <div class="comandos_cmm">
+                    <p>git add .</p>
+                </div>
+            </div>
+            <div class="gray">
+                <p class="comandos">Realizar commit de los cambios localmente</p>
+                <div class="comandos_cmm">
+                    <p>git commit -m "Comentario del commit"</p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Ver todos los commits del más reciente al más antiguo</p>
+                <div class="comandos_cmm">
+                    <p>git log --oneline</p>
+                </div>
+            </div>
+            <div class="gray">
+                <p class="comandos">Bug de commit: la consola no responde presionar: </p>
+                <div class="comandos_cmm">
+                    <p>:q!</p>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Repositorio remoto</h3>
+            <div class="gray">
+                <p class="comandos">Crear una carpeta local</p>
+                <div class="comandos_cmm">
+                    <p>Nombre de la nueva carpeta vacía</p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Conectarse al repositorio remoto</p>
+                <div class="comandos_cmm">
+                    <p>git remote add origin "IP de la ruta del respositorio</p>
+                </div>
+            </div>
+            <div class="gray">
+                <p class="comandos">Hacer push (Subir los cambios al respositorio).</p>
+                <div class="comandos_cmm">
+                    <p>git push -u origin master</p>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Omitir archivos en GitHub</h3>
+            <div class="claro">
+                <p class="comandos">.gitignore</p>
+                <div class="comandos_cmm">
+                    <p>arhivo.js // Ignora el archivo en cuestion</p>
+                    <p>*.js // Ignora todos los arhivos con extensión .js
+                    <p>node_modules/ //Ignora toda la carpeta</p>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Historial de commits</h3>
+            <div class="gray">
+                <p class="comandos">Ver historial</p>
+                <div class="comandos_cmm">
+                    <p>git log --oneline</p>
+                    <p>git checkout IdDelCommit</p>
+                </div>
+                <div class="claro">
+                    <p class="comandos">Volver a la versión actual</p>
+                    <div class="comandos_cmm">
+                        <p>git checkout nombreDeLaRama o IdActualCommit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Resetear un commit</h3>
+            <div class="gray">
+                <p class="comandos">Resetear un commit y volver a un commit especifico</p>
+                <div class="comandos_cmm">
+                    <p>git reset —hard “IdDelCommit”</p>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Recuperar o resetear un commit</h3>
+            <div class="gray">
+                <p class="comandos">Recuperar los commits despues de un reseteo</p>
+                <div class="comandos_cmm">
+                    <p>git reflog</p>
+                    <p>git reset —hard “IdDelCommitQueSeQuiereRecuperar”</p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Bajar los cambios del repositorio en la nube</p>
+                <div class="comandos_cmm">
+                    <p>git pull origin “NombreDeLaRama”</p>
+                </div>
+            </div>
+            <div class="gray">
+                <p class="comandos">Quitar un commit específico</p>
+                <div class="comandos_cmm">
+                    <p>git revert “IdDelCommit” //Es ncesario hacer commit  nuevamente</p>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Trabajar con ramas</h3>
+            <div class="claro">
+                <p class="comandos">Rama donde nos encontramos actualmente</p>
+                <div class="comandos_cmm">
+                    <p>git branch</p>
+                </div>
+            </div>
+            <div class="gray">
+                <p class="comandos">Crear una nueva rama</p>
+                <div class="comandos_cmm">
+                    <p>git branch nombreDeLaNuevaRama</p>
+                    <p>git branch <span class="text-secondary">//Verificar que la rama se creo</span></p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Pasarnos a la nueva rama creada</p>
+                <div class="comandos_cmm">
+                    <p>git checkout nombreRama</p>
+                </div>
+            </div>
+            <div class="gray">
+                <p class="comandos">Ver el organigrama de las ramas</p>
+                <div class="comandos_cmm">
+                    <p>git log --oneline --graph</p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Hacer push en la rama creada</p>
+                <div class="comandos_cmm">
+                    <p>git push --set-upstream origin nombreRama</p>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Fusionar una rama con la master</h3>
+            <div class="gray">
+                <p class="comandos">Posicionarse dentro de la rama master (es un decir) y ejecutar:</p>
+                <div class="comandos_cmm">
+                    <p>git merge nombreRama</p>
+                    <p>git log --oneline --graph</p>
+                </div>
+            </div>
+            <div class="claro">
+                <p class="comandos">Eliminar una rama</p>
+                <div class="comandos_cmm">
+                    <p>git branch -d nombreRama</p>
+                </div>
+            </div>
+        </div>
+        <div class="cursos">
+            <h3 class="text-center text-primary">Resolver conflictos</h3>
+            <div class="gray">
+                <p class="comandos">Seleccionar el commit correcto</p>
+                <div class="comandos_cmm">
+                    <p>git add .</p>
+                    <p>git commit -m "descripción del conflicto"</p>
+                </div>
+            </div>
+    </div>
+    <!-- https://github.com/AdoReyes/cursoGit/blob/master/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
